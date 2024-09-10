@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-card>
+    <img alt="DUOCUC" src="assets/icon/DUOCUC-LOGO.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Inicio de sesión</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Enter a valid email" errorText="Invalid email" ngModelemail></ion-input>
+      <ion-item>
+        <ion-input type="password" label="Contraseña" [(ngModel)]="user.password"
+        labelPlacement="floating" placeholder="Ingrese su contraseña" >
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+      <ion-button shape="round" [routerLink]="['/home']">Entrar</ion-button> <br>
+      <ion-button shape="round" color="warning">Contraseña olvidada</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+
+
+
+
+
+
+</ion-header>
+
+
+
+
+
+

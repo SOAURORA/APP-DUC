@@ -9,19 +9,19 @@
       <ion-content color="light">
         <ion-list [inset]="true">
           <ion-item [button]="true">
-            <ion-icon color="danger" slot="start" name="list-circle" size="large"></ion-icon>
+            <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon>
             <ion-label>Perfil</ion-label>
           </ion-item>
           <ion-item [button]="true">
-            <ion-icon color="tertiary" slot="start" name="list-circle" size="large"></ion-icon>
+            <ion-icon color="secondary" slot="start" name="list-circle" size="large"></ion-icon>
             <ion-label>Asistencias</ion-label>
           </ion-item>
           <ion-item [button]="true">
-            <ion-icon color="success" slot="start" name="list-circle" size="large"></ion-icon>
+            <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon>
             <ion-label>Generar QR</ion-label>
           </ion-item>
           <ion-item [button]="true">
-            <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon>
+            <ion-icon color="secondary" slot="start" name="list-circle" size="large"></ion-icon>
             <ion-label>Configuracion</ion-label>
           </ion-item>
         </ion-list>
@@ -93,18 +93,30 @@
   <ion-content>
   <ion-header>
     <ion-toolbar>
-      <ion-title>Home</ion-title>
+      <ion-title>Inicio</ion-title>
+      <img src="assets/icon/DUOCUC-LOGO.jpeg" alt="DUOCUC">
     </ion-toolbar>
   </ion-header>
     <ion-menu-toggle>
       
       <ion-item button detail="true">
         <ion-label>
-          <h3>Button Item</h3>
+          <h6>Button Item</h6>
           <p>Detail set to true - detail arrow displays on both modes</p>
         </ion-label>
       </ion-item>
-      
+      <ion-item button detail="true">
+        <ion-label>
+          <h6>Button Item 2</h6>
+          <p>Detail set to true - detail arrow displays on both modes</p>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail="true">
+        <ion-label>
+          <h6>Button Item 3</h6>
+          <p>Detail set to true - detail arrow displays on both modes</p>
+        </ion-label>
+      </ion-item>
 
 
 
@@ -114,7 +126,7 @@
       <ion-button expand="block" shape="round" color="secondary">
         DESCARGAR APP
       </ion-button>
-      <ion-button expand="full" shape="round" color="secondary">
+      <ion-button expand="full" shape="round" color="secondary" [routerLink]="['/login']">
         SALIR
       </ion-button>
   </ion-content>
