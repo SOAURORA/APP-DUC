@@ -7,30 +7,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  user = {
+    username: string,
+    password: string,
+  };
+  
 
   ngOnInit() {
   }
-
-  user = {
-    username: '',
-    password: '',
-  };
+  
 
 
-  burbuja=false;
-  this.burbuja= !this.burbuja
-  validar () {
-    if (this.user.username.length != 0) {
-      if (this.user.password.length != 0) {
-        console.log('Datos confirmados con exito.')
 
-      } else {
-        console.log('Sin contraseña valida')
-      }
-    } else {
-      console.log('Sin usuario valido')
+  validar() {
+    if (!this.user.username || this.user.username.length === 0) {
+      console.log('Sin usuario');
+      return;
     }
+  
+    if (!this.user.password || this.user.password.length === 0) {
+      console.log('Sin contraseña');
+      return;
+    }
+    console.log('Informacion valida con exito');
+  
+    let navigationExtras: NavigationExtras = {
+      state: {
+        user: this.user.username,
+        pass: this.user.password
+      }
+    };
+  
+    this.cambiarSpin();
+  
+    setTimeout(() => {
+      this.router.navigate(['/inicio'], navigationExtras);
+      this.cambiarSpin();
+    }, 3500);
+  }
+  
+
+  cambiarSpin(){
+    this.burbuja = !this.burbuja
   }
 
 
