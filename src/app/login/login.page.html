@@ -13,7 +13,7 @@
     <ion-card-header>
       <ion-card-title>Inicio de sesión</ion-card-title>
     </ion-card-header>
-      <ion-input type="email" fill="solid" label="Email" labelPlacement="floating"></ion-input>
+      <ion-input type="email" fill="solid" label="Email" [(ngModel)]="user.username" labelPlacement="floating"></ion-input>
       <ion-card-header>
         <ion-input type="password" label="Contraseña" [(ngModel)]="user.password" labelPlacement="floating"
           placeholder="Ingrese su contraseña">
@@ -30,6 +30,6 @@
           </div>
       </ion-item>
     <ion-button shape="round" color="warning" (click)="validar()">Entrar</ion-button> <br>
-          <ion-button shape="round" color="warning" [routerLink]="['/password-change']">Contraseña olvidada</ion-button> 
+    <ion-button shape="round" color="warning" [routerLink]="['/password-change']">Contraseña olvidada</ion-button> 
     </ion-card>
 </ion-content>

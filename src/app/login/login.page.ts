@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  user = {
+  user: {
     username: string,
     password: string,
   };
@@ -16,32 +17,46 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
   
+  burbuja = false;
 
-
+  constructor(private router : Router){
+    this.user = {
+      username: '',
+      password: ''
+    }
+  }
 
   validar() {
-    if (!this.user.username || this.user.username.length === 0) {
+    if (!this.user.username) {
       console.log('Sin usuario');
       return;
     }
   
-    if (!this.user.password || this.user.password.length === 0) {
+    if (!this.user.password) {
       console.log('Sin contraseña');
       return;
     }
-    console.log('Informacion valida con exito');
-  
-    let navigationExtras: NavigationExtras = {
+
+    console.log('Información válida con éxito');
+
+    const navigationExtras: NavigationExtras = {
       state: {
         user: this.user.username,
         pass: this.user.password
       }
     };
+
+    this.cambiarSpin();
+
+    setTimeout(() => {
+      this.router.navigate(['/home'], navigationExtras);
+      this.cambiarSpin();
+    }, 3500);
   
     this.cambiarSpin();
   
     setTimeout(() => {
-      this.router.navigate(['/inicio'], navigationExtras);
+      this.router.navigate(['/home'], navigationExtras);
       this.cambiarSpin();
     }, 3500);
   }

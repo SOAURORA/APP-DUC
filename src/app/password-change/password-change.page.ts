@@ -7,16 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasswordChangePage implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit() {
   }
 
-  user = {
-    password: '',
+  user: {
+    username: string,
+    password: string,
   };
-
-
-
+  
+  constructor(){
+    this.user = {
+      username: '',
+      password: ''
+    }
+  }
+    
 
 }
