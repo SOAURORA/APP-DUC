@@ -12,4 +12,11 @@ export class PasswordChangePage implements OnInit {
   ngOnInit() {
   }
 
+  user = {
+    password: '',
+  };
+
+
+
+
 }
