@@ -5,34 +5,31 @@
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
+</ion-header>
 
+<ion-content>
   <ion-card>
     <img alt="DUOCUC" src="assets/icon/DUOCUC-LOGO.jpeg" />
     <ion-card-header>
       <ion-card-title>Inicio de sesión</ion-card-title>
     </ion-card-header>
-  
-    <ion-card-content>
-      <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Enter a valid email" errorText="Invalid email" ngModelemail></ion-input>
-      <ion-item>
-        <ion-input type="password" label="Contraseña" [(ngModel)]="user.password"
-        labelPlacement="floating" placeholder="Ingrese su contraseña" >
+      <ion-input type="email" fill="solid" label="Email" labelPlacement="floating"></ion-input>
+      <ion-card-header>
+        <ion-input type="password" label="Contraseña" [(ngModel)]="user.password" labelPlacement="floating"
+          placeholder="Ingrese su contraseña">
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
+    </ion-card-header> 
+    <ion-checkbox justify="end">Recuerdame</ion-checkbox>
         <ion-item>
-          <ion-checkbox justify="end">Recuerdame</ion-checkbox>
-        </ion-item>
+          <div *ngIf="burbuja">
+            <ion-item>
+              <ion-label>Concectando</ion-label>
+              <ion-spinner name="bubbles"></ion-spinner>
+            </ion-item>
+          </div>
       </ion-item>
-      <ion-button shape="round" color= "solid" [routerLink]="['/home']">Entrar</ion-button> <br>
-      <ion-button shape="round" color="warning"  [routerLink]="['/password-change']">Contraseña olvidada</ion-button>
-    </ion-card-content>
-  </ion-card>
-
-
-</ion-header>
-
-
-
-
-
-
+    <ion-button shape="round" color="warning" (click)="validar()">Entrar</ion-button> <br>
+          <ion-button shape="round" color="warning" [routerLink]="['/password-change']">Contraseña olvidada</ion-button> 
+    </ion-card>
+</ion-content>
