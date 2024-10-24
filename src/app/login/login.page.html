@@ -1,9 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Login</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -30,6 +27,6 @@
           </div>
       </ion-item>
     <ion-button shape="round" color="warning" (click)="validar()">Entrar</ion-button> <br>
-    <ion-button shape="round" color="warning" [routerLink]="['/password-change']">Contraseña olvidada</ion-button> 
+    <ion-button shape="round" color="warning" [routerLink]="['/password-change']">Olvide mi contraseña</ion-button> 
     </ion-card>
 </ion-content>
