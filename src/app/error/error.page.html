@@ -7,7 +7,19 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">error</ion-title>
+      <ion-title size="large">Error Page</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Error del sistema!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Ha ocurrido un error en el sistema, por favor regrese a otra página.
+        <br> <a [routerLink]="['/login']"> REGRESAR </a> 
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>
