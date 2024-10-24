@@ -1,8 +1,6 @@
-#container .login mudkip {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-  }
-  
+.profile-image {
+  width: 150px; /* Tamaño deseado de la imagen */
+  height: 150px; /* Asegura que la imagen sea un cuadrado */
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarla */
+}

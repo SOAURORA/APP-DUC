@@ -9,17 +9,18 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <img alt="ICONPROFILE" src="assets/icon/mudkip.jpeg" />
+    <div>AAAAAAAAAAAA</div>
   </ion-header>
   <div id="container">
     <ion-card>
       <ion-card-header>
+        <img alt="ICONPROFILE" src="assets/icon/mudkip.jpg" class="profile-image">
         <ion-card-subtitle>Informacion del usuario</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ion-list>
           <ion-item>
-            <ion-input label="Nombre" type="text" placeholder="Ingrese nombre"></ion-input>
+            <ion-input label="Nombres" type="text" placeholder="Ingrese nombres"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input label="Apellidos" type="text" placeholder="Ingrese apellidos"></ion-input>
@@ -28,16 +29,10 @@
             <ion-input label="Edad" type="number" placeholder="Ingrese edad"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label style="text-align: start;">Nivel Educacional</ion-label>
-            <ion-select justify="space-between" value="optEduc" interface="action-sheet" placeholder="Seleccione nivel">
-              <ion-select-option value="Ninguno">Ninguno</ion-select-option>
-              <ion-select-option value="Tecnico">Tecnico</ion-select-option>
-              <ion-select-option value="Universitario">Universitario</ion-select-option>
-              <ion-select-option value="Magister">Magister</ion-select-option>
-            </ion-select>
+            <ion-input label="Direccion Sede DuocUC" type="text" placeholder="Ingrese direccion"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label style="text-align: start;">Fecha Nacimiento</ion-label>
+            <ion-label style="text-align: start;">Fecha de Nacimiento</ion-label>
             <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
             <ion-modal [keepContentsMounted]="true">
@@ -53,6 +48,6 @@
   </div>
 
   <ion-button expand="full" shape="round" color="warning" [routerLink]="['/login']">
-    SALIR
+    DESCONECTAR
   </ion-button>
 </ion-content>
