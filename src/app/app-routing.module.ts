@@ -22,14 +22,18 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },  {
-    path: 'error',
-    loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
   },
+
   {
     path: 'controller',
     loadChildren: () => import('./Admin/controller/controller.module').then( m => m.ControllerPageModule)
   },
+
+  {
+    path: '**',
+    loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
+  },
+
 
 ];
 
