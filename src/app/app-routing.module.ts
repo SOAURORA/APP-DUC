@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { authGuard } from './servicios/auth.guard';
+
+
 
 const routes: Routes = [
   {
@@ -8,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'hone',
     pathMatch: 'full'
   },
   {
