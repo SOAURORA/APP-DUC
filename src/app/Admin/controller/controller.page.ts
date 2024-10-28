@@ -2,7 +2,7 @@ import { DatabaseService } from './../../servicios/sqlite.service';
 import { Component, OnInit } from '@angular/core';
 import { APIControllerService } from 'src/app/servicios/apicontroller.service';
 import { User } from 'src/app/models/user.model';
-import { firstValueFrom } from 'rxjs';
+
 
 
 @Component({
