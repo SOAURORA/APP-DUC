@@ -1,6 +1,5 @@
-import { DatabaseService } from './../../servicios/sqlite.service';
 import { Component, OnInit } from '@angular/core';
-import { APIControllerService } from 'src/app/servicios/apicontroller.service';
+import { APIControllerService } from 'src/app/Servicios/apicontroller.service';
 import { User } from 'src/app/models/user.model';
 
 
@@ -13,7 +12,7 @@ import { User } from 'src/app/models/user.model';
 export class ControllerPage {
   users: User[] = [];
 
-  constructor(private APIControllerService: APIControllerService, DatabaseServicece : DatabaseService) {}
+  constructor(private APIControllerService: APIControllerService) {}
 
   ionViewDidEnter() {
     this.loadUsers(); 
