@@ -39,7 +39,11 @@ const routes: Routes = [
   {
     path: 'qrpage',
     loadChildren: () => import('./qrpage/qrpage.module').then( m => m.QrpagePageModule)
+  },  {
+    path: 'qr-page',
+    loadChildren: () => import('./qr-page/qr-page.module').then( m => m.QrPagePageModule)
   },
+
   
 
 
