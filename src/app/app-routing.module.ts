@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'hone',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -36,6 +36,11 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
   },
+  {
+    path: 'qrpage',
+    loadChildren: () => import('./qrpage/qrpage.module').then( m => m.QrpagePageModule)
+  },
+  
 
 
 ];
