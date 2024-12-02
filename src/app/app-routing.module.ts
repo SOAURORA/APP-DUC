@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { authGuard } from './servicios/auth.guard';
+
 
 
 
@@ -28,8 +28,8 @@ const routes: Routes = [
   },
 
   {
-    path: 'qr-page',
-    loadChildren: () => import('./qr-page/qr-page.module').then( m => m.QrPagePageModule)
+    path: 'barcode-scanning',
+    loadChildren: () => import('./barcode-scanning/barcode-scanning.module').then( m => m.BarcodeScanningPageModule)
   },
 
 
@@ -41,7 +41,12 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
-  }
+  },  {
+    path: 'barcode-scanning',
+    loadChildren: () => import('./barcode-scanning/barcode-scanning.module').then( m => m.BarcodeScanningPageModule)
+  },
+
+
 
 
 
