@@ -28,6 +28,12 @@ const routes: Routes = [
   },
 
   {
+    path: 'qr-page',
+    loadChildren: () => import('./qr-page/qr-page.module').then( m => m.QrPagePageModule)
+  },
+
+
+  {
     path: 'controller',
     loadChildren: () => import('./Admin/controller/controller.module').then( m => m.ControllerPageModule)
   },
@@ -35,16 +41,9 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
-  },
-  {
-    path: 'qrpage',
-    loadChildren: () => import('./qrpage/qrpage.module').then( m => m.QrpagePageModule)
-  },  {
-    path: 'qr-page',
-    loadChildren: () => import('./qr-page/qr-page.module').then( m => m.QrPagePageModule)
-  },
+  }
 
-  
+
 
 
 ];

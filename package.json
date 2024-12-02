@@ -31,10 +31,13 @@
     "@capacitor/status-bar": "6.0.1",
     "@ionic/angular": "^8.0.0",
     "cordova-sqlite-storage": "^6.1.0",
+    "http-proxy-middleware": "^3.0.3",
     "ionicons": "^7.0.0",
     "ng-qrcode": "^18.0.0",
+    "rollup": "^4.28.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "vite": "^6.0.1",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
