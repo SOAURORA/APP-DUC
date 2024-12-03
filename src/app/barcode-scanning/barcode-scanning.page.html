@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>barcode-scanning</ion-title>
+    <ion-title>Escaneo QR(?)</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
@@ -13,4 +13,19 @@
       <ion-title size="large">barcode-scanning</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Botón dentro del contenido principal -->
+  <ion-button expand="full" id="startScanBtn" style="margin: 20px;">
+    Iniciar escaneo QR
+  </ion-button>
+  <ion-button expand="full" id="stopScanBtn" color="danger" style="margin: 20px;">
+    Detener escaneo QR
+  </ion-button>
+
+  <ion-button expand="full" id="readFromImageBtn" style="margin: 20px;">
+    Leer QR desde imagen (?)
+  </ion-button>
+
+
+
 </ion-content>

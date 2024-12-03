@@ -41,10 +41,7 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
-  },  {
-    path: 'barcode-scanning',
-    loadChildren: () => import('./barcode-scanning/barcode-scanning.module').then( m => m.BarcodeScanningPageModule)
-  },
+  }
 
 
 
